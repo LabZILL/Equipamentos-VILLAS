@@ -18,7 +18,7 @@ table = table.iloc[1:]
 # Ar condicionado
 arcond = table.loc[table['TIPO DO EQUIPAMENTO']=='AR CONDICIONADO'] #primeiro filtro os itens pelo tipo
 arcond = pd.DataFrame(arcond.groupby('VILLA')['CÓDIGO DO EQUIPAMENTO'].count().reset_index()) #Agrupo e conto quantos tem em cada villa
-arcond.columns(['VILLA', 'QTD'])
+arcond.columns= ['VILLA', 'QTD']
 
 
 # Aquecedores: Boiler e Cardal
