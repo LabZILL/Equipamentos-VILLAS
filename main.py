@@ -123,11 +123,11 @@ with col_conteudo:
 
         with col_tabela:
             st.dataframe(arcond_filtrado, use_container_width=True, hide_index=True)
-            st.metric("Total de unidades", int(arcond_filtrado['CÓDIGO DO EQUIPAMENTO'].sum()))
+            st.metric("Total de unidades", int(arcond_filtrado['QTD'].sum()))
 
         with col_grafico:
             st.bar_chart(
-                arcond_filtrado.set_index('VILLA')['CÓDIGO DO EQUIPAMENTO'],
+                arcond_filtrado.set_index('VILLA')['QTD'],
                 use_container_width=True,
                 color="#1f77b4"
             )
@@ -156,11 +156,11 @@ with col_conteudo:
 
         with col_tabela:
             st.dataframe(bomba_filtrado, use_container_width=True, hide_index=True)
-            st.metric("Total de unidades", int(bomba_filtrado['CÓDIGO DO EQUIPAMENTO'].sum()))
+            st.metric("Total de unidades", int(bomba_filtrado['QTD'].sum()))
 
         with col_grafico:
             st.bar_chart(
-                bomba_filtrado.set_index('VILLA')['CÓDIGO DO EQUIPAMENTO'],
+                bomba_filtrado.set_index('VILLA')['QTD'],
                 use_container_width=True,
                 color="#1f77b4"
             )
